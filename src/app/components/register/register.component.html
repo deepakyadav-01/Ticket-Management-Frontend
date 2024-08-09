@@ -1,0 +1,23 @@
+<div class="register-container">
+    <div class="card register-card">
+      <h2>Register</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="name">
+        <div class="form-group">
+          <input type="text" id="firstname" formControlName="firstname" required placeholder="Enter First Name" class="input">
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastname" formControlName="lastname" required placeholder="Enter Last Name" class="input">
+        </div>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" formControlName="email" required placeholder="Enter Email"class="input">
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" formControlName="password" required placeholder="Enter Password" class="input">
+        </div>
+        <button class="btn btn-submit" type="submit" [disabled]="!registerForm.valid">Register</button>
+      </form>
+      <p class="login-link">Already have an account? <a routerLink="/login">Login</a></p>
+    </div>
+  </div>
